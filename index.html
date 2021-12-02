@@ -22,20 +22,22 @@
     }
 
     header {
-        height: 5rem;
+        height: 7rem;
         text-align: center;
-        background-color: #34626C;
+        background-color: #01748b;
         color: white;
     }
 
     header h1 {
-        padding-top: 1rem;
+        padding-top: 2rem;
+        font-weight: 600;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
     /* #839B97 */
     main {
         display: flex;
         height: 100vh;
-        background-color: #839B97;
+        background-color: #004c5d;
         justify-content: space-evenly;
         align-items: center;
     }
@@ -45,14 +47,26 @@
     }
 
     .input-container {
-        background-color: #CFD3CE;
+        /* background-color: #CFD3CE; */
+        background-color: #85b2b4;
         padding: 2rem;
         width:30%;
         border-radius: 5%;
+        color:#002f3a;
+    }
+
+    button{
+        color: white;
+        font-weight: 600;
+        background-color: #002f3a;
     }
 
     label {
         font-weight: 600;
+    }
+
+    path:hover{
+        cursor: pointer;
     }
 
 </style>
@@ -74,7 +88,7 @@
                     <label for="formGroupExampleInput2">Cost ₹</label>
                     <input type="text" class="form-control" id="cost" placeholder="Enter Cost ₹">
                 </div> 
-                <button type="submit" class="btn btn-primary">Add item</button>
+                <button type="submit" class="btn ">Add item</button>
             </form>
         </div>
         <div class="graph-container"></div>

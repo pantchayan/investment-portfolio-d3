@@ -80,7 +80,7 @@ let showDetails = (item) => {
     .text((d) => `${d.name} : ₹${d.cost}`) 
     .attr("font-weight", 600)
     .attr("class", "detail")
-    .attr('fill', 'black')
+    .attr('fill', 'white')
     .attr("y", dims.height + 100);
 };
 
