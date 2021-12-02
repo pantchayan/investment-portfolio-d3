@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Tracker</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<style>
+    * {
+        margin: 0;
+        font-family: arial;
+
+    }
+
+    body { 
+        overflow-y: hidden;
+    }
+
+    header {
+        height: 5rem;
+        text-align: center;
+        background-color: #34626C;
+        color: white;
+    }
+
+    header h1 {
+        padding-top: 1rem;
+    }
+    /* #839B97 */
+    main {
+        display: flex;
+        height: 100vh;
+        background-color: #839B97;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    main div {
+        margin-bottom: 20rem;
+    }
+
+    .input-container {
+        background-color: #CFD3CE;
+        padding: 2rem;
+        width:30%;
+        border-radius: 5%;
+    }
+
+    label {
+        font-weight: 600;
+    }
+
+</style>
+
+<body>
+
+    <header>
+        <h1>Investment Tracker</h1>
+    </header>
+
+    <main>
+        <div class="input-container">
+            <form>
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Item name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter item name">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Cost ₹</label>
+                    <input type="text" class="form-control" id="cost" placeholder="Enter Cost ₹">
+                </div> 
+                <button type="submit" class="btn btn-primary">Add item</button>
+            </form>
+        </div>
+        <div class="graph-container"></div>
+    </main>
+
+
+    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore-compat.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyARzVFtuutSe82AesxGkv0EV8tNCdHoBsI",
+            authDomain: "d3-course-591e6.firebaseapp.com",
+            projectId: "d3-course-591e6",
+            storageBucket: "d3-course-591e6.appspot.com",
+            messagingSenderId: "165203212279",
+            appId: "1:165203212279:web:09071849c39ac02763a0f2"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+        const settings = { timestampsInSnapshots: true };
+        db.settings(settings);
+
+    //   console.log(db.collection('dishes'));
+    </script>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="index.js"></script>
+    <script src="graph.js"></script>
+</body>
+
+</html>
